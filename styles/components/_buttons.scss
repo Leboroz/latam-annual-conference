@@ -1,0 +1,16 @@
+@use '../global' as *;
+.btn {
+  &-secondary {
+    color: $secondary;
+    background-color: #fff;
+    border: 5px solid $secondary;
+    padding: 10px 15px;
+    transition: background-color, color;
+    transition-duration: 0.3s;
+    font-size: 1rem;
+    &:hover {
+      background-color: $secondary;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@use '../global' as *;
+.navbar {
+  width: 100vw;
+  .dark-nav {
+    display: none;
+    width: 100vw;
+    height: 40px;
+    background-color: $primary;
+    justify-content: end;
+    align-items: center;
+    .dark-links {
+      display: flex;
+      gap: 20px;
+      .dark-link {
+        font-size: 0.80rem;
+        color: #fff;
+        .fab {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  .light-nav {
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    .logo {
+      display: none;
+      font-size: 3rem;
+      font-weight: bold;
+      // @include breakpoint($lg) {
+      //   display: block;
+      // }
+    }
+    .direction {
+      align-items: center;
+      gap: 70px;
+      .links {
+        display: flex;
+        gap: 60px;
+        .link {
+          a {
+            color: $primary;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .img-wrapper {
+      width: 80px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
