@@ -1,0 +1,59 @@
+$primary:#272a31;
+$secondary: #ec5242;
+$gray: #d3d3d3;
+$section-padding: 14.153846153846vw;
+
+@font-face {
+  font-family:"COCOGOOSE";
+  src:url(../fonts/Cocogoose_trial.eot) format("eot"),
+  url(../fonts/Cocogoose_trial.woff) format("woff"),
+  url(../fonts/Cocogoose_trial.ttf) format("truetype"),
+  url(../fonts/Cocogoose_trial.svg#COCOGOOSE) format("svg");
+  font-weight:normal;
+  font-style:normal;
+}
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+@mixin breakpoint($screen) {
+  @if map-has-key($map: $grid-breakpoints, $key: $screen) {
+    @media (min-width: map-get($map: $grid-breakpoints, $key: $screen)) {
+      @content;
+    }
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: "Lato",Arial, Helvetica, sans-serif;
+}
+
+h2, h3 {
+  font-family: 'COCOGOOSE',Arial, Helvetica, sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.padding-x {
+  padding: 0 $section-padding;
+}
+
+.shadow-bottom {
+ box-shadow: 10px 5px 5px rgba($color: #000000, $alpha: 0.2);
+}
