@@ -1,0 +1,45 @@
+@use '../global' as *;
+.display {
+  &-1 {
+    background-image: url('https://2021.latinoware.org/wp-content/uploads/2021/08/Background1.jpg');
+    -webkit-background-clip: text;
+    font-weight: 900;
+    font-size: 2rem;
+    color: transparent;
+    line-height: 2rem;
+
+    @include breakpoint(md) {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+
+    @include breakpoint(lg) {
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+  }
+
+  &-2 {
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    line-height: 1rem;
+
+    @include breakpoint(md) {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+
+    @include breakpoint(lg) {
+      font-size: 2.75rem;
+      line-height: 2rem;
+    }
+  }
+
+  &-3 {
+    font-size: 1.5rem;
+  }
+}
+.par {
+  color: #3f434b;
+  line-height: 1.5rem;
+}

@@ -1,0 +1,54 @@
+@use '../global' as *;
+
+.featured-section {
+  background-image: url(../images/main/main-program-banner.png);
+  
+  .card-wrapper {
+    flex-direction: column;
+    gap: 10px;
+    margin-block: 3rem;
+    .card {
+      grid-template-columns: 0.7fr 1fr 2fr;
+      column-gap: 1rem;
+      width: 100%;
+      align-items: center;
+      background-color: rgba($color: #fff, $alpha: 0.1);
+      padding: 1rem 1.5rem;
+
+      .img-wrapper {
+        width: clamp(2.5rem,4.5vw,4rem);
+        justify-self: center;
+        .img {
+          width: 100%;
+          
+        }
+      }
+
+      .card-title {
+        font-family: "Lato", Arial, Helvetica, sans-serif;
+        text-align: start;
+        font-size: clamp(1rem, 4.5vw, 1.25rem);
+        @include breakpoint(md) {
+          text-align: center;
+        }
+      }
+
+      .card-paragraph {
+        text-align: left;
+        font-size: clamp(.5rem, 2.5vw, 1rem);
+        justify-self: flex-end;
+        @include breakpoint(md) {
+          text-align: center;
+        }
+      }
+      @include breakpoint(md) {
+        grid-template-columns: auto;
+
+      }
+    }
+    @include breakpoint(md) {
+      flex-direction: row;
+
+    }
+  }
+}

@@ -20,8 +20,16 @@ h2, h3 {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .padding-x {
-  padding: 0 clamp(1rem, 5vw, 10rem);
+  padding-inline: clamp(1rem, 5vw, 14vw);
+}
+
+.padding-y {
+  padding-block: 4rem;
 }
 
 @media (min-width: 992px) {
@@ -37,6 +45,34 @@ h2, h3 {
   .desktop {
     display: block;
   }
+}
+
+.text-primary {
+  color: #272a31;
+}
+.text-secondary {
+  color: #ec5242;
+}
+.text-white {
+  color: #fff;
+}
+.text-center {
+  text-align: center;
+}
+
+.section-line {
+  width: 100%;
+  margin-block: 1rem;
+  position: relative;
+}
+.section-line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(50% - 1.5rem);
+  height: 1px;
+  width: 3rem;
+  background-color: #ec5242;
 }
 
 .sr-only {
@@ -76,6 +112,52 @@ h2, h3 {
   opacity: 0.7;
 }
 
+.display-1 {
+  background-image: url("https://2021.latinoware.org/wp-content/uploads/2021/08/Background1.jpg");
+  -webkit-background-clip: text;
+  font-weight: 900;
+  font-size: 2rem;
+  color: transparent;
+  line-height: 2rem;
+}
+@media (min-width: 768px) {
+  .display-1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+@media (min-width: 992px) {
+  .display-1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+.display-2 {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  line-height: 1rem;
+}
+@media (min-width: 768px) {
+  .display-2 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+@media (min-width: 992px) {
+  .display-2 {
+    font-size: 2.75rem;
+    line-height: 2rem;
+  }
+}
+.display-3 {
+  font-size: 1.5rem;
+}
+
+.par {
+  color: #3f434b;
+  line-height: 1.5rem;
+}
+
 .navbar {
   width: 100vw;
 }
@@ -100,7 +182,6 @@ h2, h3 {
 }
 .navbar .light-nav {
   justify-content: space-between;
-  height: 80px;
   align-items: center;
   width: 100vw;
 }
@@ -109,7 +190,7 @@ h2, h3 {
   top: 1rem;
   right: 1rem;
   position: absolute;
-  background-color: #fff;
+  background-color: transparent;
   font-size: 2.5rem;
   color: #272a31;
   padding: 0.5rem;
@@ -143,7 +224,7 @@ h2, h3 {
   width: 100vw;
   height: 100vh;
   background-color: #fff;
-  padding: 2rem clamp(1rem, 5vw, 10rem);
+  padding: 2rem clamp(1rem, 5vw, 14vw);
   transform: translateX(-100%);
   transition: transform 0.5s;
   flex-direction: column;
@@ -173,6 +254,160 @@ h2, h3 {
 }
 .navbar .light-nav .img-wrapper img {
   width: 100%;
+}
+@media (min-width: 992px) {
+  .navbar .light-nav {
+    height: 80px;
+  }
+}
+
+.intro-section {
+  padding-block: 7rem 5rem;
+  background: no-repeat url(../images/main/intro-image.png);
+  background-position-x: 50%;
+}
+.intro-section .content .title .display-2 {
+  margin-bottom: 1rem;
+}
+.intro-section .content .par {
+  padding: 1rem;
+  background-color: #F6F6F6;
+  border: 4px solid #fff;
+  margin-block: 1rem;
+  height: 100px;
+}
+@media (min-width: 992px) {
+  .intro-section .content .par {
+    max-width: 75%;
+  }
+}
+.intro-section .content .intro-bottom {
+  color: #3f434b;
+}
+.intro-section .content .intro-bottom .date {
+  font-family: "COCOGOOSE", Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+}
+.intro-section .content .intro-bottom .location {
+  font-size: 1.25rem;
+  display: block;
+}
+@media (min-width: 992px) {
+  .intro-section .content {
+    width: 80%;
+  }
+}
+@media (min-width: 992px) {
+  .intro-section {
+    background-position: auto;
+  }
+}
+
+.featured-section {
+  background-image: url(../images/main/main-program-banner.png);
+}
+.featured-section .card-wrapper {
+  flex-direction: column;
+  gap: 10px;
+  margin-block: 3rem;
+}
+.featured-section .card-wrapper .card {
+  grid-template-columns: 0.7fr 1fr 2fr;
+  column-gap: 1rem;
+  width: 100%;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem 1.5rem;
+}
+.featured-section .card-wrapper .card .img-wrapper {
+  width: clamp(2.5rem, 4.5vw, 4rem);
+  justify-self: center;
+}
+.featured-section .card-wrapper .card .img-wrapper .img {
+  width: 100%;
+}
+.featured-section .card-wrapper .card .card-title {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  text-align: start;
+  font-size: clamp(1rem, 4.5vw, 1.25rem);
+}
+@media (min-width: 768px) {
+  .featured-section .card-wrapper .card .card-title {
+    text-align: center;
+  }
+}
+.featured-section .card-wrapper .card .card-paragraph {
+  text-align: left;
+  font-size: clamp(0.5rem, 2.5vw, 1rem);
+  justify-self: flex-end;
+}
+@media (min-width: 768px) {
+  .featured-section .card-wrapper .card .card-paragraph {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .featured-section .card-wrapper .card {
+    grid-template-columns: auto;
+  }
+}
+@media (min-width: 768px) {
+  .featured-section .card-wrapper {
+    flex-direction: row;
+  }
+}
+
+.speakers-section .card-wrapper .person-card {
+  width: 100%;
+  gap: 1rem;
+}
+.speakers-section .card-wrapper .person-card .img-wrapper {
+  flex: 1;
+}
+.speakers-section .card-wrapper .person-card .img-wrapper .img {
+  width: 50%;
+  background-image: url(../images/fake-people/Chess_Board.svg);
+  background-size: 70%;
+  aspect-ratio: 1;
+  position: relative;
+}
+.speakers-section .card-wrapper .person-card .img-wrapper .img::before {
+  content: "";
+  width: clamp(100px, 200%, 150px);
+  aspect-ratio: 1;
+  background-image: url("../images/fake-people/person-1.jpeg");
+  background-size: cover;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+.speakers-section .card-wrapper .person-card .card-content {
+  flex: 2;
+  text-align: start;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.speakers-section .card-wrapper .person-card .card-content .person-card-title {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  color: #272a31;
+}
+.speakers-section .card-wrapper .person-card .card-content .person-card-sub-title {
+  font-size: clamp(0.8rem, 2.5vw, 1.25rem);
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+}
+.speakers-section .card-wrapper .person-card .card-content .card-line {
+  border: 1px solid #d3d3d3;
+  width: 1.5rem;
+}
+.speakers-section .card-wrapper .person-card .card-content .person-card-paragraph {
+  font-size: clamp(0.7rem, 2.5vw, 1.25rem);
+  color: #272a31;
+}
+@media (min-width: 768px) {
+  .speakers-section .card-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,61 @@
+@use '../global' as *;
+.speakers-section {
+  .card-wrapper {
+    .person-card {
+      width: 100%;
+      gap: 1rem;
+      .img-wrapper {
+        flex: 1;
+        .img {
+          width: 50%;
+          background-image: url(../images/fake-people/Chess_Board.svg);
+          background-size: 70%;
+          aspect-ratio: 1;
+          position: relative;
+          &::before {
+            content: '';
+            width: clamp(100px, 200%, 150px);
+            aspect-ratio: 1;
+            background-image: url('../images/fake-people/person-1.jpeg');
+            background-size: cover;
+            position: absolute;
+            top: 25%;
+            left: 25%;
+          }
+        }
+      }
+
+      .card-content {
+        flex: 2;
+        text-align: start;
+        flex-direction: column;
+        gap: 0.5rem;
+        
+        .person-card-title {
+          font-size: clamp(1rem, 2.5vw, 1.25rem);
+          font-family: 'Lato', Arial, Helvetica, sans-serif;
+          color: $primary;
+
+        }
+
+        .person-card-sub-title {
+          font-size: clamp(.8rem, 2.5vw, 1.25rem);
+          font-family: 'Lato', Arial, Helvetica, sans-serif;
+        }
+
+        .card-line {
+          border: 1px solid $gray;
+          width: 1.5rem;
+        }
+
+        .person-card-paragraph {
+          font-size: clamp(.7rem, 2.5vw, 1.25rem);
+          color: $primary;
+        }
+      }
+    }
+    @include breakpoint(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./assets/css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;700;900&display=swap" rel="stylesheet">
   <script src="./scripts/index.js" type="module"></script>
 </head>
 
@@ -41,7 +41,52 @@
     </div>
   </header>
   <main>
-    section.intro-section.padding-x
+    <!-- ************************************************************************************************************************
+                                                    INTRODUCTION SECTION
+    ************************************************************************************************************************ -->
+
+    <section class="intro-section padding-x">
+      <article class="content">
+        <header class="title">
+          <h2 class="display-2 text-secondary">"Hello! Sharing world"</h2>
+          <h1 class="display-1 text-secondary">18th Latin American Congress on Free Software and Open Technologies</h1>
+        </header>
+        <p class="par">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius soluta est dolor saepe alias
+        </p>
+        <div class="intro-bottom"><span class="date">2015.10.15(THU) ~ 16(FRI)</span><span class="location">@ Parque
+            Tecnologico Itaipu</span></div>
+      </article>
+    </section>
+    <!-- ************************************************************************************************************************
+                                                    FEATURED SECTION
+    ************************************************************************************************************************ -->
+    <section class="featured-section padding-y padding-x text-center">
+      <h1 class="display-3 text-white">Main Program</h1>
+      <div class="section-line"></div>
+      <article id="card_wrapper" class="card-wrapper flex"></article>
+      <a class="text-white" href="#">SEE THE WHOLE PROGRAM</a>
+    </section>
+    <!-- ************************************************************************************************************************
+                                                    SPEAKERS SECTION
+    ************************************************************************************************************************ -->
+    <section class="speakers-section padding-y padding-x text-center">
+      <h1 class="h3 text-primary">Featured Speakers</h1>
+      <div class="section-line"></div>
+      <article id="people_card" class="card-wrapper grid">
+        <div class="person-card flex">
+          <figure class="img-wrapper">
+            <div class="img"></div>
+          </figure>
+          <div class="card-content flex">
+            <h2 class="person-card-title text-primary">Fake person</h2>
+            <h3 class="person-card-sub-title text-secondary">This person doesn't exist</h3>
+            <hr class="card-line">
+            <p class="person-card-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, minima.
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
   </main>
   <footer></footer>
 </body>

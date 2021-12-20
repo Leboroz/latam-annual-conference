@@ -23,7 +23,6 @@
   }
   .light-nav {
     justify-content: space-between;
-    height: 80px;
     align-items: center;
     width: 100vw;
     .hamburger {
@@ -31,7 +30,7 @@
       top: 1rem;
       right: 1rem;
       position: absolute;
-      background-color: #fff;
+      background-color: transparent;
       font-size: 2.5rem;
       color: $primary;
       padding: 0.5rem;
@@ -96,6 +95,9 @@
       img {
         width: 100%;
       }
+    }
+    @include breakpoint(lg){
+      height: 80px;
     }
   }
 }
