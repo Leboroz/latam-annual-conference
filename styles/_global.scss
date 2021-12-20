@@ -1,7 +1,7 @@
 $primary:#272a31;
 $secondary: #ec5242;
 $gray: #d3d3d3;
-$section-padding: 14.153846153846vw;
+$section-padding: clamp(1rem, 5vw, 10rem);
 
 @font-face {
   font-family:"COCOGOOSE";
@@ -55,5 +55,25 @@ h2, h3 {
 }
 
 .shadow-bottom {
- box-shadow: 10px 5px 5px rgba($color: #000000, $alpha: 0.2);
+  @include breakpoint(lg){
+    box-shadow: 10px 5px 5px rgba($color: #000000, $alpha: 0.2);
+  }
+}
+
+.desktop {
+  display: none;
+  @include breakpoint(lg) {
+    display: block;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }

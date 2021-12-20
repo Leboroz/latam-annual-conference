@@ -14,3 +14,15 @@
     }
   }
 }
+
+.close-button {
+  position: absolute;
+  line-height: 0;
+  top: 2rem;
+  right: 1rem;
+  font-size: 1.75rem;
+  cursor: default;
+  &:hover {
+    opacity: 0.7;
+  }
+}
