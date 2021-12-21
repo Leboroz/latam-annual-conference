@@ -1,9 +1,28 @@
 @use '../global' as *;
 .speakers-section {
+  transition: height;
+  transition-duration: 1s;
+
+  .fa-chevron-down, .fa-chevron-up{
+    margin-left: 1rem;
+    color: $secondary;
+  }
   .card-wrapper {
     .person-card {
+      padding-block: 4rem;
       width: 100%;
-      gap: 1rem;
+      gap: 2rem;
+
+      &[data-visible="false"] {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        @include breakpoint(lg) {
+          visibility: visible;
+          opacity: 1;
+          position: static;
+        }
+      }
       .img-wrapper {
         flex: 1;
         .img {
@@ -12,15 +31,22 @@
           background-size: 70%;
           aspect-ratio: 1;
           position: relative;
-          &::before {
-            content: '';
-            width: clamp(100px, 200%, 150px);
-            aspect-ratio: 1;
-            background-image: url('../images/fake-people/person-1.jpeg');
-            background-size: cover;
-            position: absolute;
-            top: 25%;
-            left: 25%;
+          transition: visibility, opacity;
+          transition-duration: 0.5s;
+
+          @for $var from 1 to 7 {
+            &-#{$var} {
+              &::before {
+                content: '';
+                width: clamp(100px, 200%, 150px);
+                aspect-ratio: 1;
+                background-image: url('../images/fake-people/person-#{$var}.jpeg');
+                background-size: cover;
+                position: absolute;
+                top: 25%;
+                left: 25%;
+              }
+            }
           }
         }
       }
@@ -53,9 +79,15 @@
           color: $primary;
         }
       }
+      
     }
     @include breakpoint(md) {
       grid-template-columns: 1fr 1fr;
+    }
+  }
+  .btn {
+    @include breakpoint(lg) {
+      display: none;
     }
   }
 }

@@ -44,4 +44,7 @@
   @include breakpoint(lg) {
     background-position: auto;
   }
+  @include breakpoint(lg) {
+    background-size: cover;
+  }
 }

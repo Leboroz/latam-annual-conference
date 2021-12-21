@@ -2,7 +2,7 @@ window.addEventListener('load', () => {
   const menuButton = document.getElementById("menu_button");
   const menu = document.getElementById("primary-navigation");
   const cards = document.getElementById('card_wrapper');
-  const peopleCard = document.getElementById('people_card')
+  const peopleCards = document.getElementById('people_card')
 
   menuButton.addEventListener('click', (event) => {
     const visibility = menu.getAttribute('data-visible');
@@ -26,9 +26,30 @@ window.addEventListener('load', () => {
     cards.appendChild(card);
   });
 
-  // for (let i = 0; i < 6; i += 1) {
-  //   const personCard = document.createElement('div');
-  //   peopleCard.className = 'person-card'
-  //   peopleCard.appendChild(personCard);
-  // }
+  for (let i = 0; i < 6; i += 1) {
+    const personCard = document.createElement('div');
+    personCard.className = 'person-card flex';
+    personCard.setAttribute('data-visible', (i < 2 ? "true" : "false"))
+    personCard.innerHTML =
+      `
+    <figure class="img-wrapper">
+      <div class="img img-${i + 1}"></div>
+    </figure>
+    <div class="card-content flex">
+      <h2 class="person-card-title text-primary">Fake person</h2>
+      <h3 class="person-card-sub-title text-secondary">This person doesn't exist</h3>
+      <hr class="card-line">
+      <p class="person-card-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, minima.
+      </p>
+    </div>
+    `
+    peopleCards.appendChild(personCard);
+  }
+  document.getElementById('see_more').addEventListener('click', (e) => {
+    Array.of(...document.querySelectorAll('.person-card')).forEach((card, i) => card.setAttribute("data-visible", (i >= 2 && card.getAttribute("data-visible") === "true") ? "false" : "true"));
+    if (e.target.innerHTML.includes('MORE'))
+      e.target.innerHTML = 'LESS <i class="fas fa-chevron-up"></i>';
+    else
+      e.target.innerHTML = 'MORE <i class="fas fa-chevron-down"></i>';
+  })
 })

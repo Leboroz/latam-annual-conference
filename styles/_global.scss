@@ -1,7 +1,7 @@
 $primary:#272a31;
 $secondary: #ec5242;
 $gray: #d3d3d3;
-$section-padding: clamp(1rem, 5vw, 14vw);
+$section-padding: clamp(1rem, 2.5vw, 5rem);
 
 @font-face {
   font-family:"COCOGOOSE";
@@ -56,6 +56,9 @@ h2, h3 {
 
 .padding-x {
   padding-inline: $section-padding;
+  @include breakpoint(lg) {
+    padding-inline: 15vw;
+  }
 }
 
 .padding-y {
@@ -74,6 +77,12 @@ h2, h3 {
     display: block;
   }
 }
+
+.mobile {
+  @include breakpoint(lg) {
+    display: none;
+  }
+}
 .text {
   &-primary {
     color: $primary;
@@ -81,6 +90,10 @@ h2, h3 {
   
   &-secondary {
     color: $secondary;
+  }
+
+  &-gray {
+    color: $gray;
   }
 
   &-white {

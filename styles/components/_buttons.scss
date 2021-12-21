@@ -1,5 +1,9 @@
 @use '../global' as *;
 .btn {
+  width: 100%;
+  padding-block: 10px;
+  background-color: #fff;
+  border: 1px solid $gray;
   &-secondary {
     color: $secondary;
     background-color: #fff;

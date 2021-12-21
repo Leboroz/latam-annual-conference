@@ -1,0 +1,21 @@
+@use '../global' as *;
+.partners-section {
+  background-color: $primary;
+  .companies {
+    width: 70%;
+    gap: 2rem;
+    align-items: center;
+    .img-wrapper {
+      flex: 1;
+      .company {
+        width: 100%;
+        height: a;
+      }
+    }
+  }
+  @include breakpoint(lg) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

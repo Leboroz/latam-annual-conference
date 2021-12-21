@@ -21,6 +21,7 @@
       }
     }
   }
+
   .light-nav {
     justify-content: space-between;
     align-items: center;
@@ -48,8 +49,14 @@
       }
     }
     .logo {
-      font-size: 3rem;
-      font-weight: bold;
+      flex: 0.7;
+      height: 100%;
+      border-radius: 15px;
+      background-image: url(../images/main/logo_Gabarito.svg);
+      background-color: #a3a3a3;
+      background-repeat: no-repeat;
+      background-position-x: 50%;
+      background-size: 40%;
     }
     .direction {
       @include breakpoint(lg){

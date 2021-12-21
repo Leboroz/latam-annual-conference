@@ -29,7 +29,7 @@
     <div class="light-nav padding-x flex">
       <button id="menu_button" class="hamburger" aria-controls="primary-navigation"><span><i
             class="fas fa-hamburger"></i></span></button>
-      <span class="logo desktop">logo</span>
+      <div class="logo desktop"></div>
       <nav class="direction flex">
         <ul data-visible="false" id="primary-navigation" class="links flex">
           <li class="link"><a href="#Program">Program</a></li>
@@ -60,11 +60,11 @@
     <!-- ************************************************************************************************************************
                                                     FEATURED SECTION
     ************************************************************************************************************************ -->
-    <section class="featured-section padding-y padding-x text-center">
+    <section class="featured-section padding-y padding-x text-center flex">
       <h1 class="display-3 text-white">Main Program</h1>
       <div class="section-line"></div>
       <article id="card_wrapper" class="card-wrapper flex"></article>
-      <a class="text-white" href="#">SEE THE WHOLE PROGRAM</a>
+      <a class="featured-link text-white" href="#">SEE THE WHOLE PROGRAM</a>
     </section>
     <!-- ************************************************************************************************************************
                                                     SPEAKERS SECTION
@@ -73,22 +73,36 @@
       <h1 class="h3 text-primary">Featured Speakers</h1>
       <div class="section-line"></div>
       <article id="people_card" class="card-wrapper grid">
-        <div class="person-card flex">
-          <figure class="img-wrapper">
-            <div class="img"></div>
-          </figure>
-          <div class="card-content flex">
-            <h2 class="person-card-title text-primary">Fake person</h2>
-            <h3 class="person-card-sub-title text-secondary">This person doesn't exist</h3>
-            <hr class="card-line">
-            <p class="person-card-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, minima.
-            </p>
-          </div>
-        </div>
+      </article>
+      <button id="see_more" aria-controls="people_card" class="btn" type="button">MORE<i
+          class="fas fa-chevron-down"></i></button>
+    </section>
+    <!-- ************************************************************************************************************************
+                                                    PARTNER SECTION
+    ************************************************************************************************************************ -->
+    <section id="partners" class="partners-section padding-x padding-y text-center desktop">
+      <h1 class="display-3 text-gray">Partner</h1>
+      <div class="section-line"></div>
+      <article class="companies flex">
+        <figure class="img-wrapper"><img src="./assets/images/companies/company-1.png" alt="company-1" class="company">
+        </figure>
+        <figure class="img-wrapper"><img src="./assets/images/companies/company-2.png" alt="company-2" class="company">
+        </figure>
+        <figure class="img-wrapper"><img src="./assets/images/companies/company-3.png" alt="company-3" class="company">
+        </figure>
+        <figure class="img-wrapper"><img src="./assets/images/companies/company-4.png" alt="company-4" class="company">
+        </figure>
+        <figure class="img-wrapper"><img src="./assets/images/companies/company-5.png" alt="company-5" class="company">
+        </figure>
       </article>
     </section>
   </main>
-  <footer></footer>
+  <footer class="footer flex padding-x ">
+    <div class="logo"></div>
+    <div class="footer-content">
+      <h6 class="text-primary">18th Latin American Congress on Free Software and Open Technologies</h6>
+    </div>
+  </footer>
 </body>
 
 </html>

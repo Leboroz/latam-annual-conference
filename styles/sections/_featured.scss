@@ -2,7 +2,8 @@
 
 .featured-section {
   background-image: url(../images/main/main-program-banner.png);
-  
+  flex-direction: column;
+  align-items: center;
   .card-wrapper {
     flex-direction: column;
     gap: 10px;
@@ -48,7 +49,17 @@
     }
     @include breakpoint(md) {
       flex-direction: row;
+    }
+  }
 
+  .featured-link {
+    @media (max-width: map-get($map: $grid-breakpoints, $key: sm)) {
+      width: 70%;
+      display: block;
+      padding: 2rem 2.5rem;
+      background-color: $secondary;
+      text-decoration: none;
+      font-weight: 600;
     }
   }
 }

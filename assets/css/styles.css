@@ -25,7 +25,12 @@ h2, h3 {
 }
 
 .padding-x {
-  padding-inline: clamp(1rem, 5vw, 14vw);
+  padding-inline: clamp(1rem, 2.5vw, 5rem);
+}
+@media (min-width: 992px) {
+  .padding-x {
+    padding-inline: 15vw;
+  }
 }
 
 .padding-y {
@@ -47,11 +52,20 @@ h2, h3 {
   }
 }
 
+@media (min-width: 992px) {
+  .mobile {
+    display: none;
+  }
+}
+
 .text-primary {
   color: #272a31;
 }
 .text-secondary {
   color: #ec5242;
+}
+.text-gray {
+  color: #d3d3d3;
 }
 .text-white {
   color: #fff;
@@ -86,6 +100,12 @@ h2, h3 {
   border: 0;
 }
 
+.btn {
+  width: 100%;
+  padding-block: 10px;
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+}
 .btn-secondary {
   color: #ec5242;
   background-color: #fff;
@@ -208,8 +228,14 @@ h2, h3 {
   }
 }
 .navbar .light-nav .logo {
-  font-size: 3rem;
-  font-weight: bold;
+  flex: 0.7;
+  height: 100%;
+  border-radius: 15px;
+  background-image: url(../images/main/logo_Gabarito.svg);
+  background-color: #a3a3a3;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-size: 40%;
 }
 @media (min-width: 992px) {
   .navbar .light-nav .direction {
@@ -224,7 +250,7 @@ h2, h3 {
   width: 100vw;
   height: 100vh;
   background-color: #fff;
-  padding: 2rem clamp(1rem, 5vw, 14vw);
+  padding: 2rem clamp(1rem, 2.5vw, 5rem);
   transform: translateX(-100%);
   transition: transform 0.5s;
   flex-direction: column;
@@ -302,9 +328,16 @@ h2, h3 {
     background-position: auto;
   }
 }
+@media (min-width: 992px) {
+  .intro-section {
+    background-size: cover;
+  }
+}
 
 .featured-section {
   background-image: url(../images/main/main-program-banner.png);
+  flex-direction: column;
+  align-items: center;
 }
 .featured-section .card-wrapper {
   flex-direction: column;
@@ -356,10 +389,41 @@ h2, h3 {
     flex-direction: row;
   }
 }
+@media (max-width: 576px) {
+  .featured-section .featured-link {
+    width: 70%;
+    display: block;
+    padding: 2rem 2.5rem;
+    background-color: #ec5242;
+    text-decoration: none;
+    font-weight: 600;
+  }
+}
 
+.speakers-section {
+  transition: height;
+  transition-duration: 1s;
+}
+.speakers-section .fa-chevron-down, .speakers-section .fa-chevron-up {
+  margin-left: 1rem;
+  color: #ec5242;
+}
 .speakers-section .card-wrapper .person-card {
+  padding-block: 4rem;
   width: 100%;
-  gap: 1rem;
+  gap: 2rem;
+}
+.speakers-section .card-wrapper .person-card[data-visible=false] {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
+@media (min-width: 992px) {
+  .speakers-section .card-wrapper .person-card[data-visible=false] {
+    visibility: visible;
+    opacity: 1;
+    position: static;
+  }
 }
 .speakers-section .card-wrapper .person-card .img-wrapper {
   flex: 1;
@@ -370,12 +434,64 @@ h2, h3 {
   background-size: 70%;
   aspect-ratio: 1;
   position: relative;
+  transition: visibility, opacity;
+  transition-duration: 0.5s;
 }
-.speakers-section .card-wrapper .person-card .img-wrapper .img::before {
+.speakers-section .card-wrapper .person-card .img-wrapper .img-1::before {
   content: "";
   width: clamp(100px, 200%, 150px);
   aspect-ratio: 1;
   background-image: url("../images/fake-people/person-1.jpeg");
+  background-size: cover;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+.speakers-section .card-wrapper .person-card .img-wrapper .img-2::before {
+  content: "";
+  width: clamp(100px, 200%, 150px);
+  aspect-ratio: 1;
+  background-image: url("../images/fake-people/person-2.jpeg");
+  background-size: cover;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+.speakers-section .card-wrapper .person-card .img-wrapper .img-3::before {
+  content: "";
+  width: clamp(100px, 200%, 150px);
+  aspect-ratio: 1;
+  background-image: url("../images/fake-people/person-3.jpeg");
+  background-size: cover;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+.speakers-section .card-wrapper .person-card .img-wrapper .img-4::before {
+  content: "";
+  width: clamp(100px, 200%, 150px);
+  aspect-ratio: 1;
+  background-image: url("../images/fake-people/person-4.jpeg");
+  background-size: cover;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+.speakers-section .card-wrapper .person-card .img-wrapper .img-5::before {
+  content: "";
+  width: clamp(100px, 200%, 150px);
+  aspect-ratio: 1;
+  background-image: url("../images/fake-people/person-5.jpeg");
+  background-size: cover;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+.speakers-section .card-wrapper .person-card .img-wrapper .img-6::before {
+  content: "";
+  width: clamp(100px, 200%, 150px);
+  aspect-ratio: 1;
+  background-image: url("../images/fake-people/person-6.jpeg");
   background-size: cover;
   position: absolute;
   top: 25%;
@@ -407,6 +523,61 @@ h2, h3 {
 @media (min-width: 768px) {
   .speakers-section .card-wrapper {
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .speakers-section .btn {
+    display: none;
+  }
+}
+
+.partners-section {
+  background-color: #272a31;
+}
+.partners-section .companies {
+  width: 70%;
+  gap: 2rem;
+  align-items: center;
+}
+.partners-section .companies .img-wrapper {
+  flex: 1;
+}
+.partners-section .companies .img-wrapper .company {
+  width: 100%;
+  height: a;
+}
+@media (min-width: 992px) {
+  .partners-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footer {
+  display: none;
+  align-items: center;
+  gap: 3rem;
+  height: 200px;
+  background-color: #fff;
+}
+.footer-content {
+  flex: 2;
+}
+.footer .logo {
+  flex: 0.7;
+  width: 75%;
+  height: 100px;
+  border-radius: 15px;
+  background-image: url(../images/main/logo_Gabarito.svg);
+  background-color: #d3d3d3;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-size: 50%;
+}
+@media (min-width: 992px) {
+  .footer {
+    display: flex;
   }
 }
 
