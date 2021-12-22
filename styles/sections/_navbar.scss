@@ -2,19 +2,23 @@
 
 .navbar {
   width: 100vw;
+
   .dark-nav {
     height: 40px;
     background-color: $primary;
     justify-content: flex-end;
     align-items: center;
+
     .dark-links {
       justify-content: flex-end;
       align-items: center;
       height: 100%;
       gap: 20px;
+
       .dark-link {
-        font-size: 0.80rem;
+        font-size: 0.8rem;
         color: #fff;
+
         .fab {
           font-size: 1rem;
         }
@@ -26,6 +30,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100vw;
+
     .hamburger {
       z-index: 9999;
       top: 1rem;
@@ -48,18 +53,13 @@
         display: none;
       }
     }
+
     .logo {
-      flex: 0.7;
-      height: 100%;
-      border-radius: 15px;
-      background-image: url(../images/main/logo_Gabarito.svg);
-      background-color: #a3a3a3;
-      background-repeat: no-repeat;
-      background-position-x: 50%;
-      background-size: 40%;
+      background-position-y: -30px;
     }
+
     .direction {
-      @include breakpoint(lg){
+      @include breakpoint(lg) {
         align-items: center;
         gap: 10vw;
       }
@@ -74,18 +74,23 @@
         padding: 2rem $section-padding;
         transform: translateX(-100%);
         transition: transform 0.5s;
+        z-index: 9998;
+
         &[data-visible="true"] {
           transform: translate(0);
         }
+
         flex-direction: column;
         gap: 5vw;
         font-size: 1.75rem;
+
         .link {
           a {
             color: $primary;
             text-decoration: none;
           }
         }
+
         @include breakpoint(lg) {
           position: static;
           width: auto;
@@ -97,13 +102,16 @@
         }
       }
     }
+
     .img-wrapper {
       width: 80px;
+
       img {
         width: 100%;
       }
     }
-    @include breakpoint(lg){
+
+    @include breakpoint(lg) {
       height: 80px;
     }
   }

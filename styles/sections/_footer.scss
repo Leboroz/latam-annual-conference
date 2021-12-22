@@ -1,26 +1,39 @@
 @use '../global' as *;
+
 .footer {
   display: none;
   align-items: center;
   gap: 3rem;
   height: 200px;
   background-color: #fff;
+
   &-content {
     flex: 2;
   }
 
-  .logo {
-    flex: .7;
-    width: 75%;
-    height: 100px;
-    border-radius: 15px;
-    background-image: url(../images/main/logo_Gabarito.svg);
-    background-color: $gray;
-    background-repeat: no-repeat;
-    background-position-x: 50%;
-    background-size: 50%;
-  }
   @include breakpoint(lg) {
     display: flex;
+  }
+
+  &-about {
+    display: flex;
+    height: 100px;
+
+    .logo {
+      background-color: white;
+      border-radius: 10px;
+      background-position: 0;
+      background-size: cover;
+    }
+
+    .footer-content {
+      @include breakpoint(lg) {
+        color: #fff;
+      }
+    }
+
+    @include breakpoint(lg) {
+      background-color: $primary;
+    }
   }
 }

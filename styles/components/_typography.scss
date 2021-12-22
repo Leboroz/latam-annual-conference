@@ -1,4 +1,5 @@
 @use '../global' as *;
+
 .display {
   &-1 {
     background-image: url('https://2021.latinoware.org/wp-content/uploads/2021/08/Background1.jpg');
@@ -7,6 +8,12 @@
     font-size: 2rem;
     color: transparent;
     line-height: 2rem;
+
+    &-about {
+      background-image: none;
+      -webkit-background-clip: border-box;
+      color: $secondary;
+    }
 
     @include breakpoint(md) {
       font-size: 3rem;
@@ -39,6 +46,7 @@
     font-size: 1.5rem;
   }
 }
+
 .par {
   color: #3f434b;
   line-height: 1.5rem;

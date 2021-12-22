@@ -1,10 +1,13 @@
 @use '../global' as *;
+
 .btn {
   width: 100%;
   padding-block: 10px;
   background-color: #fff;
   border: 1px solid $gray;
+
   &-secondary {
+    text-decoration: none;
     color: $secondary;
     background-color: #fff;
     border: 5px solid $secondary;
@@ -12,6 +15,7 @@
     transition: background-color, color;
     transition-duration: 0.3s;
     font-size: 1rem;
+
     &:hover {
       background-color: $secondary;
       color: #fff;
@@ -26,6 +30,7 @@
   right: 1rem;
   font-size: 1.75rem;
   cursor: default;
+
   &:hover {
     opacity: 0.7;
   }
