@@ -4,9 +4,6 @@
 
 > This is a website about a conference in Latin America.
 
-![screenshot](./app_screenshot.png)
-
-
 I personalized the content of my page. I chose a conference for a Latin American congress.
 
 ## I used the following guidelines from the template.
