@@ -41,7 +41,7 @@ I personalized the content of my page. I chose a conference for a Latin American
 
 ## video presentation
 
-[![Leboroz video]]({https://www.loom.com/share/2bd2aad2302a4081a84cb0192dae71ed} "Leboroz video")
+[Leboroz video](https://www.loom.com/share/2bd2aad2302a4081a84cb0192dae71ed)
 
 ## Built With
 
