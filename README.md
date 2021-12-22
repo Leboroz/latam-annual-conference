@@ -94,6 +94,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - GitHub: [@RafaelEchart](https://github.com/RafaelEchart)
+- Template from behance: [Cindy Shin](https://www.behance.net/adagio07)
 
 ## 📝 License
 
