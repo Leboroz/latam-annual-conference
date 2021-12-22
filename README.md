@@ -41,13 +41,7 @@ I personalized the content of my page. I chose a conference for a Latin American
 
 ## video presentation
 
-<video controls width="250">
-
-    <source src="https://www.loom.com/share/2bd2aad2302a4081a84cb0192dae71ed"
-            type="video/webm">
-
-    Sorry, your browser doesn't support embedded videos.
-</video>
+[![Leboroz video]]({https://www.loom.com/share/2bd2aad2302a4081a84cb0192dae71ed} "Leboroz video")
 
 ## Built With
 
