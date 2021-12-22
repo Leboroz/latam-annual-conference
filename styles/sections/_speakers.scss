@@ -49,6 +49,7 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
+
           @include breakpoint(md) {
             max-width: 600px;
           }
@@ -101,7 +102,9 @@
                 $clamp: clamp(100px, 200%, 150px);
 
                 content: '';
-                width: $clamp;
+                min-width: 100px;
+                width: 200%;
+                max-width: 150px;
                 aspect-ratio: 1 / 1;
                 background-image: url('../images/fake-people/person-#{$var}.jpeg');
                 background-size: cover;
@@ -123,7 +126,7 @@
         .person-card-title {
           $card-title: clamp(1rem, 2.5vw, 1.25rem);
 
-          font-size: $card-title;
+          font-size: 1.25rem;
           font-family: 'Lato', Arial, Helvetica, sans-serif;
           color: $primary;
         }
@@ -131,7 +134,7 @@
         .person-card-sub-title {
           $card-sub: clamp(0.8rem, 2.5vw, 1.25rem);
 
-          font-size: $card-sub;
+          font-size: 1rem;
           font-family: 'Lato', Arial, Helvetica, sans-serif;
         }
 
@@ -143,7 +146,7 @@
         .person-card-paragraph {
           $person-card-paragraph: clamp(0.7rem, 2.5vw, 1.25rem);
 
-          font-size: $person-card-paragraph;
+          font-size: 1.25rem;
           color: $primary;
         }
       }
@@ -156,6 +159,7 @@
 
   .btn {
     margin-block: 1rem;
+
     @include breakpoint(lg) {
       display: none;
     }

@@ -1,7 +1,6 @@
 window.addEventListener('load', () => {
   const menuButton = document.getElementById('menu_button');
   const menu = document.getElementById('primary-navigation');
-  const cards = document.getElementById('card_wrapper');
 
   const openAndClose = () => {
     const visibility = menu.getAttribute('data-visible');

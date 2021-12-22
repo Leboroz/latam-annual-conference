@@ -76,7 +76,7 @@ h3 {
 }
 
 .padding-x {
-  padding-inline: $section-padding;
+  padding-inline: 2.5vw;
 
   @include breakpoint(lg) {
     padding-inline: 15vw;
@@ -152,7 +152,6 @@ h3 {
     background-color: $secondary;
   }
 }
-
 
 .sr-only {
   position: absolute;

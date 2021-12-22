@@ -1,9 +1,5 @@
 @use '../global' as *;
 
-$img-clamp: clamp(2.5rem, 4.5vw, 4rem);
-$card-clamp: clamp(1rem, 4.5vw, 1.25rem);
-$card-par-clamp: clamp(0.5rem, 2.5vw, 1rem);
-
 .featured-section {
   background-image: url(../images/main/main-program-banner.png);
   flex-direction: column;
@@ -23,7 +19,11 @@ $card-par-clamp: clamp(0.5rem, 2.5vw, 1rem);
       padding: 1rem 1.5rem;
 
       .img-wrapper {
-        width: $img-clamp;
+        $img-clamp: clamp(2.5rem, 4.5vw, 4rem);
+
+        min-width: 2.5rem;
+        width: 4.5vw;
+        max-width: 4rem;
         justify-self: center;
 
         .img {
@@ -32,9 +32,11 @@ $card-par-clamp: clamp(0.5rem, 2.5vw, 1rem);
       }
 
       .card-title {
+        $card-clamp: clamp(1rem, 4.5vw, 1.25rem);
+
         font-family: "Lato", Arial, Helvetica, sans-serif;
         text-align: start;
-        font-size: $card-clamp;
+        font-size: 1.25rem;
 
         @include breakpoint(md) {
           text-align: center;
@@ -42,8 +44,10 @@ $card-par-clamp: clamp(0.5rem, 2.5vw, 1rem);
       }
 
       .card-paragraph {
+        $card-par-clamp: clamp(0.5rem, 2.5vw, 1rem);
+
         text-align: left;
-        font-size: $card-par-clamp;
+        font-size: 1rem;
         justify-self: flex-end;
 
         @include breakpoint(md) {
