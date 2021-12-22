@@ -1,5 +1,4 @@
 @use '../global' as *;
-$i:1;
 
 .speakers-section {
   transition: height;
@@ -9,35 +8,50 @@ $i:1;
     flex-direction: column;
     align-items: center;
 
+    @include breakpoint-down(md) {
+      flex-direction: column;
+
+      .person-img-wrapper {
+        width: calc(100% - 20px);
+        margin-inline: 20px;
+      }
+    }
+
     .image-container {
       width: 100%;
-      gap: 2%;
+      gap: 2.5vw;
+      justify-content: center;
+      flex-wrap: wrap;
 
-      .img-wrapper {
-        width: 50%;
+      .person-img-wrapper {
         position: relative;
+        margin-block: 3rem;
 
         &::before {
           position: absolute;
           content: '';
-          background-color: rgba($color: #000, $alpha:0.1);
+          background-color: rgba($color: #000, $alpha:0.3);
           height: 100%;
           width: 100%;
-          backdrop-filter: blur(1px);
+        }
+
+        &::after {
+          content: 'Congress 2022';
+          font-size: 2rem;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          color: #fff;
+          width: 100%;
         }
 
         .congress-img {
           width: 100%;
           height: 100%;
-        }
-      }
-
-      @include breakpoint-down(md) {
-        flex-direction: column;
-
-        .img-wrapper {
-          width: calc(100% - 20px);
-          margin-inline: 20px;
+          object-fit: cover;
+          @include breakpoint(md) {
+            max-width: 600px;
+          }
         }
       }
     }
@@ -59,6 +73,8 @@ $i:1;
         visibility: hidden;
         opacity: 0;
         position: absolute;
+        top: 0;
+        left: 0;
 
         @include breakpoint(lg) {
           visibility: visible;
@@ -67,14 +83,14 @@ $i:1;
         }
       }
 
-      .img-wrapper {
+      .person-img-wrapper {
         flex: 1;
 
         .img {
           width: 50%;
           background-image: url(../images/fake-people/Chess_Board.svg);
           background-size: 70%;
-          aspect-ratio: $i;
+          aspect-ratio: 1 / 1;
           position: relative;
           transition: visibility, opacity;
           transition-duration: 0.5s;
@@ -86,7 +102,7 @@ $i:1;
 
                 content: '';
                 width: $clamp;
-                aspect-ratio: $i;
+                aspect-ratio: 1 / 1;
                 background-image: url('../images/fake-people/person-#{$var}.jpeg');
                 background-size: cover;
                 position: absolute;
@@ -139,6 +155,7 @@ $i:1;
   }
 
   .btn {
+    margin-block: 1rem;
     @include breakpoint(lg) {
       display: none;
     }

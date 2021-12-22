@@ -17,7 +17,7 @@
 
   &-about {
     display: flex;
-    height: 100px;
+    height: 200px;
 
     .logo {
       background-color: white;
@@ -30,6 +30,10 @@
       @include breakpoint(lg) {
         color: #fff;
       }
+    }
+
+    @include breakpoint-down(sm) {
+      height: 100px;
     }
 
     @include breakpoint(lg) {

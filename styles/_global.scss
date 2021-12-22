@@ -51,6 +51,7 @@ $grid-breakpoints: (
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 * {
@@ -151,6 +152,7 @@ h3 {
     background-color: $secondary;
   }
 }
+
 
 .sr-only {
   position: absolute;

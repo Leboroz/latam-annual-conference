@@ -54,8 +54,13 @@
       }
     }
 
-    .logo {
-      background-position-y: -30px;
+    .home-link {
+      display: block;
+      height: 100%;
+      width: 200px;
+      .logo {
+        background-position-y: -30px;
+      }
     }
 
     .direction {

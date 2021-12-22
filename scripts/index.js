@@ -35,7 +35,7 @@ window.addEventListener('load', () => {
     personCard.className = 'person-card flex';
     personCard.setAttribute('data-visible', (i < 2 ? 'true' : 'false'));
     personCard.innerHTML = `
-    <figure class="img-wrapper">
+    <figure class="person-img-wrapper">
       <div class="img img-${i + 1}"></div>
     </figure>
     <div class="card-content flex">

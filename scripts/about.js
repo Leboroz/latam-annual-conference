@@ -13,19 +13,4 @@ window.addEventListener('load', () => {
   Array.of(...document.querySelectorAll('.link > a')).forEach((link) => {
     link.addEventListener('click', openAndClose);
   });
-
-  const icons = ['lecture', 'cc exhibition', 'forum', 'workshop', 'cc ignite'];
-  icons.forEach((icon) => {
-    const card = document.createElement('div');
-    card.className = 'card grid';
-    card.innerHTML = `
-      <figure class="img-wrapper">
-        <img class="img" src="../assets/images/icons/${icon}.svg" alt="${icon}">
-      </figure>
-      <h3 class="card-title text-secondary">${icon}</h2>
-      <p class="card-paragraph text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores,
-      eum.</p>
-    `;
-    cards.appendChild(card);
-  });
 });
