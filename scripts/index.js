@@ -56,6 +56,11 @@ window.addEventListener('load', () => {
       subTitle: 'This person doesn\'t exist',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, minima.',
     },
+     {
+      title: 'Fake person',
+      subTitle: 'This person doesn\'t exist',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, minima.',
+    },
   ];
 
   people.forEach((person, i) => {
