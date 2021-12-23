@@ -1,0 +1,22 @@
+@use '../global' as *;
+
+.logo-section {
+  border: 1px solid $gray;
+  flex-direction: column;
+  align-items: center;
+
+  .par-logo {
+    width: 70%;
+  }
+
+  .logo-about {
+    width: 100%;
+    max-width: 424px;
+    flex: none;
+    background-size: 100% auto;
+    background-position: 0;
+    height: 200px;
+    border: 1px solid $gray;
+    margin-top: 30px;
+  }
+}

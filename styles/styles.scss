@@ -1,0 +1,16 @@
+//USE CUSTOM VARIABLES
+@use './global';
+
+//IMPORT COMPONENTS
+@use './components/buttons';
+@use './components/mixins';
+@use './components/typography';
+
+//IMPORT SECTIONS
+@use './sections/navbar';
+@use './sections/intro-section';
+@use './sections/featured';
+@use './sections/speakers';
+@use './sections/logo';
+@use './sections/partners';
+@use './sections/footer';

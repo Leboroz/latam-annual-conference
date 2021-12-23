@@ -1,0 +1,41 @@
+{
+  "name": "capstone-project-1",
+  "version": "1.0.0",
+  "description": "This is a capstone project for module-1 in the microverse curriculum",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch styles:assets/css",
+    "stylint": "npx stylelint \"**/*.{css,scss}\" --fix",
+    "wibhint": "npx hint .",
+    "eslint": "npx eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leboroz/capstone-project-1.git"
+  },
+  "keywords": [
+    "capstone",
+    "project",
+    "microverse",
+    "leboroz",
+    "leonardo",
+    "albornoz"
+  ],
+  "author": "Leonardo Albornoz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Leboroz/capstone-project-1/issues"
+  },
+  "homepage": "https://github.com/Leboroz/capstone-project-1#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.3",
+    "hint": "^6.1.9",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
+  }
+}

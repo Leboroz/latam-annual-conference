@@ -1,0 +1,69 @@
+@use '../global' as *;
+
+.intro-section {
+  padding-block: 7rem 5rem;
+  background: no-repeat url(../images/main/intro-image.jpg);
+  background-position-x: 50%;
+
+  &-about {
+    display: flex;
+    justify-content: center;
+
+    .intro-bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .content {
+    &-about {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .title {
+      .display-2 {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .par {
+      padding: 1rem;
+      background-color: #f6f6f6;
+      border: 4px solid #fff;
+      margin-block: 1rem;
+
+      @include breakpoint(lg) {
+        max-width: 75%;
+      }
+    }
+
+    .intro-bottom {
+      color: #3f434b;
+
+      .date {
+        font-family: "COCOGOOSE", Arial, Helvetica, sans-serif;
+        font-size: 2rem;
+      }
+
+      .location {
+        font-size: 1.25rem;
+        display: block;
+      }
+    }
+
+    @include breakpoint(lg) {
+      width: 80%;
+    }
+  }
+
+  @include breakpoint(lg) {
+    background-position: 0;
+  }
+
+  @include breakpoint(lg) {
+    background-size: cover;
+  }
+}

@@ -1,0 +1,167 @@
+@use '../global' as *;
+
+.speakers-section {
+  transition: height;
+  transition-duration: 1s;
+
+  &-about {
+    flex-direction: column;
+    align-items: center;
+
+    @include breakpoint-down(md) {
+      flex-direction: column;
+
+      .person-img-wrapper {
+        width: calc(100% - 20px);
+        margin-inline: 20px;
+      }
+    }
+
+    .image-container {
+      width: 100%;
+      gap: 2.5vw;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .person-img-wrapper {
+        position: relative;
+        margin-block: 3rem;
+
+        &::before {
+          position: absolute;
+          content: '';
+          background-color: rgba($color: #000, $alpha:0.3);
+          height: 100%;
+          width: 100%;
+        }
+
+        &::after {
+          content: 'Congress 2022';
+          font-size: 2rem;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          color: #fff;
+          width: 100%;
+        }
+
+        .congress-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+
+          @include breakpoint(md) {
+            max-width: 400px;
+          }
+        }
+      }
+    }
+  }
+
+  .fa-chevron-down,
+  .fa-chevron-up {
+    margin-left: 1rem;
+    color: $secondary;
+  }
+
+  .card-wrapper {
+    .person-card {
+      padding-block: 4rem;
+      width: 100%;
+      gap: 2rem;
+
+      &[data-visible="false"] {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @include breakpoint(lg) {
+          visibility: visible;
+          opacity: 1;
+          position: static;
+        }
+      }
+
+      .person-img-wrapper {
+        flex: 1;
+
+        .img {
+          width: 50%;
+          background-image: url(../images/fake-people/Chess_Board.svg);
+          background-size: 70%;
+          aspect-ratio: 1 / 1;
+          position: relative;
+          transition: visibility, opacity;
+          transition-duration: 0.5s;
+
+          @for $var from 1 to 7 {
+            &-#{$var} {
+              &::before {
+                $clamp: clamp(100px, 200%, 150px);
+
+                content: '';
+                min-width: 100px;
+                width: 200%;
+                max-width: 150px;
+                aspect-ratio: 1 / 1;
+                background-image: url('../images/fake-people/person-#{$var}.jpeg');
+                background-size: cover;
+                position: absolute;
+                top: 25%;
+                left: 25%;
+              }
+            }
+          }
+        }
+      }
+
+      .card-content {
+        flex: 2;
+        text-align: start;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .person-card-title {
+          $card-title: clamp(1rem, 2.5vw, 1.25rem);
+
+          font-size: 1.25rem;
+          font-family: 'Lato', Arial, Helvetica, sans-serif;
+          color: $primary;
+        }
+
+        .person-card-sub-title {
+          $card-sub: clamp(0.8rem, 2.5vw, 1.25rem);
+
+          font-size: 1rem;
+          font-family: 'Lato', Arial, Helvetica, sans-serif;
+        }
+
+        .card-line {
+          border: 1px solid $gray;
+          width: 1.5rem;
+        }
+
+        .person-card-paragraph {
+          $person-card-paragraph: clamp(0.7rem, 2.5vw, 1.25rem);
+
+          font-size: 1.25rem;
+          color: $primary;
+        }
+      }
+    }
+
+    @include breakpoint(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .btn {
+    margin-block: 1rem;
+
+    @include breakpoint(lg) {
+      display: none;
+    }
+  }
+}

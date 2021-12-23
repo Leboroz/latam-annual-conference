@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>capstone project module 1</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;700;900&display=swap" rel="stylesheet">
+  <script src="./scripts/index.js" type="module"></script>
+</head>
+
+<body>
+  <header class="navbar shadow-bottom">
+    <div class="dark-nav padding-x flex desktop">
+      <ul class="dark-links flex">
+        <li class="dark-link"><i class="fab fa-facebook"></i></li>
+        <li class="dark-link"><i class="fab fa-twitter"></i></li>
+        <li class="dark-link">English</li>
+        <li class="dark-link">My page</li>
+        <li class="dark-link">Logout</li>
+      </ul>
+    </div>
+    <div class="light-nav padding-x flex">
+      <button id="menu_button" class="hamburger" aria-controls="primary-navigation"><span><i
+            class="fas fa-hamburger"></i></span></button>
+      <a href="./index.html" class="home-link"><span class="logo desktop"></span></a>
+      <nav class="direction flex">
+        <ul data-visible="false" id="primary-navigation" class="links flex">
+          <li class="link"><a href="#Program">Program</a></li>
+          <li class="link"><a href="#Featured">Featured</a></li>
+          <li class="link"><a href="#partners">Sponsor</a></li>
+        </ul>
+        <a href="./about/about.html" class="btn-secondary desktop">About</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!-- ************************************************************************************************************************
+                                                    INTRODUCTION SECTION
+    ************************************************************************************************************************ -->
+
+    <section class="intro-section padding-x">
+      <article class="content">
+        <header class="title">
+          <h2 class="display-2 text-secondary">"Hello! Sharing world"</h2>
+          <h1 class="display-1 text-secondary">18th Latin American Congress on Free Software and Open Technologies</h1>
+        </header>
+        <p class="par">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius soluta est dolor saepe alias
+        </p>
+        <div class="intro-bottom"><span class="date">2015.10.15(THU) ~ 16(FRI)</span><span class="location">@ Parque
+            Tecnologico Itaipu</span></div>
+      </article>
+    </section>
+    <!-- ************************************************************************************************************************
+                                                    FEATURED SECTION
+    ************************************************************************************************************************ -->
+    <section id="Program" class="featured-section padding-y padding-x text-center flex">
+      <h2 class="display-3 text-white">Main Program</h2>
+      <div class="section-line"></div>
+      <article id="card_wrapper" class="card-wrapper flex"></article>
+      <a class="featured-link text-white" href="#">SEE THE WHOLE PROGRAM</a>
+    </section>
+    <!-- ************************************************************************************************************************
+                                                    SPEAKERS SECTION
+    ************************************************************************************************************************ -->
+    <section id="Featured" class="speakers-section padding-y padding-x text-center">
+      <h2 class="h3 text-primary">Featured Speakers</h2>
+      <div class="section-line"></div>
+      <article id="people_card" class="card-wrapper grid">
+      </article>
+      <button id="see_more" aria-controls="people_card" class="btn" type="button">MORE<i
+          class="fas fa-chevron-down"></i></button>
+    </section>
+    <!-- ************************************************************************************************************************
+                                                    PARTNER SECTION
+    ************************************************************************************************************************ -->
+    <section id="partners" class="partners-section padding-x padding-y text-center desktop">
+      <h2 class="display-3 text-gray">Partner</h2>
+      <div class="section-line"></div>
+      <article class="companies flex">
+        <figure class="company-img-wrapper"><img src="./assets/images/companies/company-1.png" alt="company-1" class="company">
+        </figure>
+        <figure class="company-img-wrapper"><img src="./assets/images/companies/company-2.png" alt="company-2" class="company">
+        </figure>
+        <figure class="company-img-wrapper"><img src="./assets/images/companies/company-3.png" alt="company-3" class="company">
+        </figure>
+        <figure class="company-img-wrapper"><img src="./assets/images/companies/company-4.png" alt="company-4" class="company">
+        </figure>
+        <figure class="company-img-wrapper"><img src="./assets/images/companies/company-5.png" alt="company-5" class="company">
+        </figure>
+      </article>
+    </section>
+  </main>
+  <footer class="footer flex padding-x ">
+    <div class="logo"></div>
+    <div class="footer-content">
+      <h6 class="text-primary">18th Latin American Congress on Free Software and Open Technologies</h6>
+    </div>
+  </footer>
+</body>
+
+</html>

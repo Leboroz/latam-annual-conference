@@ -1,0 +1,43 @@
+@use '../global' as *;
+
+.footer {
+  display: none;
+  align-items: center;
+  gap: 3rem;
+  height: 200px;
+  background-color: #fff;
+
+  &-content {
+    flex: 2;
+  }
+
+  @include breakpoint(lg) {
+    display: flex;
+  }
+
+  &-about {
+    display: flex;
+    height: 200px;
+
+    .footer-section-logo {
+      background-color: white;
+      border-radius: 10px;
+      background-position: 0;
+      background-size: cover;
+    }
+
+    .footer-content {
+      @include breakpoint(lg) {
+        color: #fff;
+      }
+    }
+
+    @include breakpoint-down(sm) {
+      height: 100px;
+    }
+
+    @include breakpoint(lg) {
+      background-color: $primary;
+    }
+  }
+}

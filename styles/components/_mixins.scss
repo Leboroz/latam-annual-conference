@@ -1,0 +1,27 @@
+@use '../global' as *;
+
+@mixin breakpoint($screen) {
+  @if map-has-key($map: $grid-breakpoints, $key: $screen) {
+    @media (min-width: map-get($map: $grid-breakpoints, $key: $screen)) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+      + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin breakpoint-down($screen) {
+  @if map-has-key($map: $grid-breakpoints, $key: $screen) {
+    @media (max-width: map-get($map: $grid-breakpoints, $key: $screen)) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+      + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
